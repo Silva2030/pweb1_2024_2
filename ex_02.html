@@ -1,39 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão Acadêmica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 300px;
+            margin: 20px auto;
+            border: 1px solid black;
+            padding: 15px;
+        }
+        h2, h3 {
+            font-size: 16px;
+            margin: 0 0 10px;
+        }
+        label {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px;
+            font-size: 14px;
+            border: 1px solid black;
+        }
+        select {
+            padding: 3px;
+        }
+        .radio-group, .checkbox-group {
+            margin-bottom: 10px;
+        }
+        .radio-group label, .checkbox-group label {
+            margin-right: 10px;
+        }
+        textarea {
+            height: 50px;
+            resize: none;
+        }
+        .checkbox-group label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .checkbox-group {
+            margin-top: -10px;
+        }
+        .buttons {
+            text-align: left;
+        }
+        .buttons button {
+            padding: 5px 15px;
+            margin-right: 5px;
+            font-size: 14px;
+        }
+    </style>
 </head>
-
 <body>
-    <form action="/action_page.html">
-        <fieldset>
-            <legend>Sistema de Gestão Academica</legend>
-            <p>Manutenção de Usuáios do Sistema Interno</p>
-            <label for=“pnome">Login:</label><br>
-            <input type="text" id="pnome" name="pnome"><br>
-            <label for=“unome">Senha:</label><br>
-            <input type="text" id="unome" name="unome">
-            <br>
-            <br>
-            <label for="cars">Status:</label>
-            <select name="cars" id="cars">
-                <option value="Inativo">Inativo</option>
-                <option value="Ativo">Ativo</option>
-            </select>
-            <p>Tipo:</p>
-            <input type="radio" id="html" name="fav_language" value="html">
-            <label for="html">Técnico</label><br>
-            <input type="radio" id="Professor" name="fav_language" value="Professor">
-            <label for="css">Professor</label><br>
-            <input type="radio" id="Aluno" name="fav_language" value="Aluno">
-            <label for="Aluno">Aluno</label>
-            
-    </form>
+    <div class="container">
+        <h2>Sistema de Gestão Acadêmica</h2>
+        <h3>Manutenção de Usuários do Sistema Interno</h3>
 
-    </fieldset>
-    </form>
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="login">
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha">
+
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+            <option value="inativo">Inativo</option>
+            <option value="ativo">Ativo</option>
+        </select>
+
+        <label>Tipo:</label>
+        <div class="radio-group">
+            <input type="radio" id="tecnico" name="tipo" value="tecnico">
+            <label for="tecnico">Técnico</label>
+            <input type="radio" id="professor" name="tipo" value="professor">
+            <label for="professor">Professor</label>
+            <input type="radio" id="aluno" name="tipo" value="aluno">
+            <label for="aluno">Aluno</label>
+        </div>
+
+        <label for="data">Data Criação:</label>
+        <input type="date" id="data" name="data">
+
+        <label>Perfil:</label>
+        <div class="radio-group">
+            <input type="radio" id="convidado" name="perfil" value="convidado">
+            <label for="convidado">Convidado</label>
+            <input type="radio" id="admin" name="perfil" value="admin">
+            <label for="admin">Administrador</label>
+        </div>
+
+        <label for="observacoes">Observações:</label>
+        <textarea id="observacoes" name="observacoes"></textarea>
+
+        <label>Módulos:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="compras" name="modulos" value="compras">
+            <label for="compras">Compras</label>
+
+            <input type="checkbox" id="biblioteca" name="modulos" value="biblioteca">
+            <label for="biblioteca">Biblioteca</label>
+
+            <input type="checkbox" id="academico" name="modulos" value="academico">
+            <label for="academico">Acadêmico</label>
+
+            <input type="checkbox" id="documentacao" name="modulos" value="documentacao">
+            <label for="documentacao">Documentação</label>
+
+            <input type="checkbox" id="recursos_humanos" name="modulos" value="recursos_humanos">
+            <label for="recursos_humanos">Recursos Humanos</label>
+        </div>
+
+        <div class="buttons">
+            <button type="submit">Salvar</button>
+            <button type="reset">Excluir</button>
+        </div>
+    </div>
 </body>
 
 </html>

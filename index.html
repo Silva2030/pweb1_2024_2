@@ -5,49 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script>
-      function mostrar() {
-        /// alert("teste");
-        var conteudo = document.getElementById("conteudo");
-        conteudo.innerHTML = "Texto Diferente";
-        conteudo.style.color = "blue";
-        conteudo.style.backgroundColor = "yellow";
-      }
-
-      function voltarCor() {
-        var conteudo = document.getElementById("conteudo");
-        conteudo.style.color = "";
-        conteudo.style.backgroundColor = "";
-      }
-      function mudarCor() {
-        var conteudo = document.getElementById("conteudo");
-        conteudo.style.color = "blue";
-        conteudo.style.backgroundColor = "purple";
-      }
-      function animacao() {
-        var anima = document.getElementById("animacao");
-        anima.classList.toggle("fade");
-      }
-    </script>
-    <style>
-      #animacao {
-        opacity: 1;
-        transition: opacity 1s;
-      }
-
-      #animacao.fade {
-        opacity: 0;
-      }
-    </style>
   </head>
   <body>
-    <!-- Comentário  -->
-    <h1>Exemplo JavaScript</h1>
-    <p id="conteudo" onmouseover="mudarCor()" onmouseout="voltarCor()">
-      Texto Qualquer Aqui!
-    </p>
-    <button onclick="mostrar()">Clique aqui</button>
+  <h3>Código-Fonte aula Programação Web 01 - 2024-02</h3>
 
-    <p id="animacao">Texto Animação</p>
-    <button onclick="animacao()">Clique aqui</button>
+  <a href="exemplos_html_css/index.html">Pagina Exemplos</a>
+  <br>
+  <a href="boostrap/index.html">Página Boostrap</a>
   </body>

@@ -84,11 +84,13 @@ class db {
 
     }
 
-    public function all(){
+    public function all($table_name = null){
+
+        $table_name = !empty($table_name) ? $table_name : $this->table_name;
 
         $conn = $this->conn();
 
-        $sql = "SELECT * FROM $this->table_name";
+        $sql = "SELECT * FROM $table_name";
 
         $st = $conn->prepare($sql);
 
@@ -130,11 +132,13 @@ class db {
 
     }
 
-    public function find($id){
+    public function find($table_name = null, $id){
+
+       $table_name = !empty($table_name) ? $table_name : $this->table_name;
 
         $conn = $this->conn();
 
-        $sql = "SELECT * FROM $this->table_name WHERE id LIKE ?";
+        $sql = "SELECT * FROM $table_name WHERE id LIKE ?";
 
         $st = $conn->prepare($sql);
 

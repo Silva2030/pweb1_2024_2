@@ -3,9 +3,6 @@
 
     $db = new db('post');
 
-    $db->checkLogin();
-
-
     $categorias = $db->all('categoria');
 
    // var_dump($categorias);

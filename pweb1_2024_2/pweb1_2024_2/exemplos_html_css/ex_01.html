@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+          function formulario(event) {
+            event.preventDefault();
+    
+            var pnome = document.getElementById("pnome").value;
+            var unome = document.getElementById("unome").value;
+    
+            alert(pnome + " - " + unome);
+          }
+        </script>
+      </head>
+      <form action="/action_page.html">
+        <fieldset>
+          <legend>Formulário Matricula de Curso</legend>
+    
+          <label for="pnome">Primeiro nome:</label><br />
+          <input type="text" id="pnome" name="pnome" /><br />
+          <label for="unome">SobreNome:</label><br />
+          <input type="text" id="unome" name="unome" />
+          <p>Curso:</p>
+          <input type="radio" id="html" name="fav_language" value="HTML" />
+          <label for="html">Técnico em Imformática</label><br />
+          <input type="radio" id="css" name="fav_language" value="CSS" />
+          <label for="css">Graduação - Análise e Desenvolvimento de Sistemas</label
+          ><br />
+          <input
+            type="radio"
+            id="javascript"
+            name="fav_language"
+            value="JavaScript"
+          />
+          <label for="javascript">Profissionalizante - Programção Web</label>
+          <p>Linuagens de preogramação de seua Preferencia:</p>
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+          <label for="vehicle1"> PHP</label><br />
+          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+          <label for="vehicle2"> Java</label><br />
+          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
+          <label for="vehicle3"> Python</label>
+          <br />
+          <br />
+          <label for="cars">Escolha um turno:</label>
+          <select name="cars" id="cars">
+            <option value="volvo">Manha</option>
+            <option value="fiat">Tarde</option>
+            <option value="mercedes">Noite</option>
+            ;
+          </select>
+          <br />
+          <br />
+          <label for="browser"> Escolha uma unidade mais próximo a voce:</label>
+          <input list="browsers" name="browser" id="browser" />
+          <datalist id="browsers">
+            <option value="Chapecó"></option>
+            <option value="Xaxim"></option>
+            <option value="Xanxere"></option>
+            <option value="São Carlos"></option>
+            <option value="São miguel do Oeste"></option>
+          </datalist>
+    
+          <br />
+          <br />
+          <input type="Submit" value="Enviar" onclick="formulario(event)" />
+        </fieldset>
+      </form>
+      <body></body>
+</html>

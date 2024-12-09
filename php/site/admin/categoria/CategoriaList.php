@@ -2,6 +2,9 @@
  include "../db.class.php";
 
     $db = new db('categoria');
+
+    $db->checkLogin();
+
     
     if(!empty($_GET['id'])){
         $db->destroy($_GET['id']);

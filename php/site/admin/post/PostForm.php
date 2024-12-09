@@ -3,6 +3,9 @@
 
     $db = new db('post');
 
+    $db->checkLogin();
+
+
     $categorias = $db->all('categoria');
 
    // var_dump($categorias);
@@ -30,6 +33,8 @@
 
 <form action="PostForm.php" method="post">
     
+<a href='../Login.php?logout=true'>Sair</a><br>
+
     <h4>Formulário Post</h4>
 
     <input type="hidden" name="id"

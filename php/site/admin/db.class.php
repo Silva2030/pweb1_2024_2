@@ -38,6 +38,8 @@ class db {
     public function insert($dados){
         $sql = "INSERT INTO $this->table_name (";
 
+     //   var_dump($dados);
+       // exit;
         unset($dados["id"]);
         $flag = 0;
         $arrayValues=[];
@@ -147,6 +149,37 @@ class db {
         return $st->fetchObject();
 
     }
+
+    public function login($dados){
+
+         $conn = $this->conn();
+ 
+         $sql = "SELECT * FROM $this->table_name WHERE login = ?";
+      
+         $st = $conn->prepare($sql);
+ 
+         $st->execute([$dados['login']]);
+
+         $result = $st->fetchObject();
+
+       //  var_dump($result);
+       //  exit;
+         if(password_verify($dados['senha'], $result->senha)){
+            return $result;
+         } else {
+            return "error";
+         }
+ 
+     }
+
+function checkLogin(){
+    
+    session_start();
+    if(empty($_SESSION['nome'])){
+        session_destroy();
+        header("Location: ../Login.php?error=Sessão Expirada!");
+    }
+}
 
 
 }

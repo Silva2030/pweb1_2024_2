@@ -3,6 +3,9 @@
 
     $db = new db('categoria');
 
+    $db->checkLogin();
+
+
     if(!empty($_POST)){
 
         if(empty($_POST['id'])) {

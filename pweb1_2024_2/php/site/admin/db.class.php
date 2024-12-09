@@ -177,7 +177,7 @@ function checkLogin(){
     session_start();
     if(empty($_SESSION['nome'])){
         session_destroy();
-        header("Location: Login:.php?error=Sessão Expirada!");
+        header("Location: ../Login.php?error=Sessão Expirada!");
     }
 }
 

@@ -33,6 +33,8 @@
 
 <form action="PostForm.php" method="post">
     
+<a href='../Login.php?logout=true'>Sair</a><br>
+
     <h4>Formulário Post</h4>
 
     <input type="hidden" name="id"

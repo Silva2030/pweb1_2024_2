@@ -19,6 +19,10 @@
         }
     }
 
+    if($_GET['logout']){
+        session_destroy();
+    }
+
 ?>
 
 <form action="Login.php" method="post">
